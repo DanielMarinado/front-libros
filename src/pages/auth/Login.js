@@ -16,9 +16,9 @@ const Login = ({ history }) => {
   useCurrentItemHeader();
   const dispatch = useDispatch();
   const { user } = useSelector((state) => ({ ...state }));
-  const [email, setEmail] = useState("mchamorro@escalab.academy");
+  const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(false);
-  const [password, setPassword] = useState("chillan2022");
+  const [password, setPassword] = useState("");
 
   useEffect(() => {
     !history.location.state && user?.token && history.push("/");
